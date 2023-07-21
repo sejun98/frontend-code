@@ -1,18 +1,16 @@
 import { useState } from "react"
 
 export default function Project() {
-    const[number,setNumber] = useState(0)
-
-    function CountUp(event) {
-        setNumber(number+1)
-
+    const[number, setNumber] = useState(0)
+    function CreateNumber() {
+        setNumber(Math.floor(Math.random() * 1000000))
     }
-
 
     return (
         <div>
             <div>{number}</div>
-            <button onClick={CountUp}>카운트올리기</button>
+            <button onClick={CreateNumber}>인증번호생성</button>
         </div>
+
     )
 }
