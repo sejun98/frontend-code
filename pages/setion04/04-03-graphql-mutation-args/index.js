@@ -1,8 +1,8 @@
 import { useMutation, gql } from "@apollo/client"
 
 const 나의그래프큐엘셋팅 = gql`
-    mutation {
-        createBoard(writer : "유리", title : "아아", contents : "안녕") {
+    mutation createBoard($writer : String, $title : String, $contents: String) {
+        createBoard(writer : $writer, title : $title, contents : $contents) {
             _id
             number
             message
@@ -10,12 +10,17 @@ const 나의그래프큐엘셋팅 = gql`
     }
 ` 
 
-
 export default function GraphqlMutationPage() {
     const [나의함수] = useMutation(나의그래프큐엘셋팅)
 
     const onClickSubmit = async () => {
-        const result = await 나의함수()
+        const result = await 나의함수({
+            variables : {                // variables 이게 $ 역활을 함
+                writer : "훈이",
+                title : "안녕하세요.",
+                contents : "반갑습니다!!",
+            }
+        })
         console.log(result)
     }
 
