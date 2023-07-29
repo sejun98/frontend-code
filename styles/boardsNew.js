@@ -26,19 +26,18 @@ export const WriterWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   padding-top: 40px;
 `;
 
 export const Writer = styled.input`
-  width: 486px;
+  width: 470px;
   height: 52px;
   padding-left: 16px;
   border: 1px solid #bdbdbd;
 `;
 
 export const Password = styled.input`
-  width: 486px;
+  width: 470px;
   height: 52px;
   padding-left: 16px;
   border: 1px solid #bdbdbd;
@@ -52,6 +51,11 @@ export const Label = styled.div`
 
 export const InputWrapper = styled.div`
   padding-top: 40px;
+  padding-left: 40px;
+`;
+export const InputWrapper2 = styled.div`
+  padding-top: 40px;
+  padding-left: 110px;
 `;
 
 export const Subject = styled.input`
@@ -170,7 +174,6 @@ export const SubmitButton = styled.button`
 
 export const Error = styled.div`
   padding-top: 10px;
-  padding-left: 5px;
   font-size: 14px;
-  color: pink;
+  color: red;
 `;
