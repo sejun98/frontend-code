@@ -13,3 +13,6 @@ export default function BoardWriterUI(props) {
         </div>
     )
 }
+
+
+const apple = 3;
