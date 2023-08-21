@@ -15,7 +15,7 @@ export default function BoardWrite() {
     const [title, setTitle] = useState("");
     const [contents, setContents] = useState("");
 
-    // const [나의함수] = useMutation(나의그래프큐엘셋팅)
+    const [나의함수] = useMutation(나의그래프큐엘셋팅)
 
     const onClickSubmit = async () => {
         const result = await 나의함수({
@@ -30,10 +30,19 @@ export default function BoardWrite() {
 
     const onChangeWriter = (event) => {
         setWriter(event.target.value)
+        if(writer && title && contents) {
+            setIsActive(true)
+        }
+
     }
 
     const onChangeTitle = (event) => {
         setTitle(event.target.value)
+
+        if(writer && title && contents) {
+            setIsActive(true)
+        }
+
 
     }
 
